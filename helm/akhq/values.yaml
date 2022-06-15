@@ -43,22 +43,20 @@ configuration:
 ##... and secret for connection information
 existingSecrets: ""
 # name of the existingSecret
-secrets: {}
-#  akhq:
-#    connections:
-#      my-cluster-plain-text:
-#        properties:
-#          bootstrap.servers: "kafka:9092"
+secrets:
+  akhq:
+    connections:
+      my-cluster-plain-text:
+        properties:
+          bootstrap.servers: "edh-dl-kafka-bootstrap:9092"
 #        schema-registry:
 #          url: "http://schema-registry:8085"
 #          type: "confluent"
 #          basic-auth-username: basic-auth-user
 #          basic-auth-password: basic-auth-pass
-#        connect:
-#          - name: "my-connect"
-#            url: "http://connect:8083"
-#            basic-auth-username: basic-auth-user
-#            basic-auth-password: basic-auth-pass
+        connect:
+          - name: "my-connect"
+            url: "http://edh-dl-connect-connect-api:8083"
 
 kafkaSecrets: []
 #Provide extra base64 encoded kubernetes secrets (keystore/truststore)
