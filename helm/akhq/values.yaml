@@ -112,7 +112,7 @@ service:
   labels: {}
   annotations:
     cloud.google.com/load-balancer-type: "Internal"
-  #loadBalancerIP: 10.29.34.49
+  loadBalancerIP: 10.29.34.36
 
 ingress:
   enabled: false
