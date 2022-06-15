@@ -111,7 +111,8 @@ service:
   #httpNodePort: 32551
   labels: {}
   annotations:
-    # cloud.google.com/load-balancer-type: "Internal"
+    cloud.google.com/load-balancer-type: "Internal"
+  #loadBalancerIP: 10.29.34.49
 
 ingress:
   enabled: false
