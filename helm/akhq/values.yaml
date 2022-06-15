@@ -106,7 +106,7 @@ containerSecurityContext: {}
 
 service:
   enabled: true
-  type: ClusterIP
+  type: LoadBalancer
   port: 80
   #httpNodePort: 32551
   labels: {}
