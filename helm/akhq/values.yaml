@@ -51,7 +51,7 @@ secrets:
           bootstrap.servers: "edh-dl-kafka-bootstrap:9092"
       eih-blumenau:
         properties:
-          bootstrap.servers: "172.17.0.201:9093"
+          bootstrap.servers: "kafka01:9093"
 #        schema-registry:
 #          url: "http://schema-registry:8085"
 #          type: "confluent"
