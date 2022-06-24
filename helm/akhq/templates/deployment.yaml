@@ -40,13 +40,13 @@ spec:
         {{- end }}
     spec:
       hostAliases:
-      - ip: "172.17.0.201"
+      - ip: "172.31.157.27"
         hostnames:
         - "kafka01"
-      - ip: "172.17.0.202"
+      - ip: "172.31.157.28"
         hostnames:
         - "kafka02"
-      - ip: "172.17.0.203"
+      - ip: "172.31.157.29"
         hostnames:
         - "kafka03"
       {{- if .Values.imagePullSecrets }}
