@@ -16,6 +16,18 @@ metadata:
     {{ $key }}: {{ $value | quote }}
   {{- end }}
 spec:
+  template:
+    pod:
+      hostAliases:
+      - ip: "172.17.0.201"
+        hostnames:
+        - "kafka01"
+      - ip: "172.17.0.202"
+        hostnames:
+        - "kafka02"
+      - ip: "172.17.0.203"
+        hostnames:
+        - "kafka03"
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
