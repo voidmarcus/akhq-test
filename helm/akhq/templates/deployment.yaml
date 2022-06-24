@@ -15,6 +15,16 @@ metadata:
        {{- toYaml . | nindent 4 }}
      {{- end }}
 spec:
+  hostAliases:
+  - ip: "172.17.0.201"
+    hostnames:
+    - "kafka01"
+  - ip: "172.17.0.202"
+    hostnames:
+    - "kafka02"
+  - ip: "172.17.0.203"
+    hostnames:
+    - "kafka03"
   replicas: {{ .Values.replicaCount | default 1 }}
   selector:
     matchLabels:
