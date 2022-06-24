@@ -21,6 +21,17 @@ spec:
       app.kubernetes.io/name: {{ include "akhq.name" . }}
       app.kubernetes.io/instance: {{ .Release.Name }}
   template:
+    pod:
+      hostAliases:
+      - ip: "172.31.157.27"
+        hostnames:
+        - "kafka01"
+      - ip: "172.31.157.28"
+        hostnames:
+        - "kafka02"
+      - ip: "172.31.157.29"
+        hostnames:
+        - "kafka03"
     metadata:
       annotations:
         {{- if .Values.configuration }}
