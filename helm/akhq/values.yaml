@@ -59,7 +59,7 @@ secrets:
 #          basic-auth-password: basic-auth-pass
         connect:
           - name: "edh-dl-connect"
-            url: "edh-dl-connect-connect-api:8083"
+            url: "edh-dl-connect-v2-connect-api:8083"
 
 kafkaSecrets: []
 #Provide extra base64 encoded kubernetes secrets (keystore/truststore)
